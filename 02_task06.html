@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+alert('Задание 6');
+/*6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).*/
+let arg1 = +prompt('Введите первое число: ');
+let arg2 = +prompt('Введите второе число: ');
+let operation = prompt('Введите название операции одним словом: ').toLowerCase();
+document.write(`Были введены числа ${arg1} и ${arg2} и выбрана операция "${operation}".`,'<br>','<br>')
+
+function plus(x, y) {
+  return (x + y);
+}
+function minus(x, y) {
+  return (x - y);
+}
+function multiplication(x, y) {
+  return (x * y);
+}
+function division(x, y) {
+  return (x / y);
+}
+
+function mathOperation(arg1, arg2, operation) {
+  switch(operation) {
+    case 'сложение':
+      return `Сумма чисел ${arg1} и ${arg2} равна: ${plus(arg1, arg2)}`;
+    case 'вычитание':
+      return `Разность чисел ${x} и ${y} равна: ${minus(x, y)}`;
+    case 'умножение':
+      return `Произведение чисел ${x} и ${y} равно: ${multiplication(x, y)}`;
+    case 'деление':
+      return `Результат деления числа ${x} на число ${y} равен: ${division(x, y)}`;
+  }
+}
+
+alert(mathOperation(arg1, arg2, operation));
+
+</script>

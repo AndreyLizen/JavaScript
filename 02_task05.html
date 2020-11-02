@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+alert('Задание 5');
+/*5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.*/
+let x = +prompt('Введите первое число: ');
+let y = +prompt('Введите второе число: ');
+document.write(`Были введены числа ${x} и ${y}.`,'<br>','<br>')
+
+function plus(x, y) {
+  return (x + y);
+}
+document.write(`Сумма чисел ${x} и ${y} равна: ${plus(x, y)}`,'<br>');
+
+function minus(x, y) {
+  return (x - y);
+}
+document.write(`Разность чисел ${x} и ${y} равна: ${minus(x, y)}`,'<br>');
+
+function multiplication(x, y) {
+  return (x * y);
+}
+document.write(`Произведение чисел ${x} и ${y} равно: ${multiplication(x, y)}`,'<br>');
+
+function division(x, y) {
+  return (x / y);
+}
+document.write(`Результат деления числа ${x} на число ${y} равен: ${division(x, y)}`,'<br>');
+
+</script>
