@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+'use strict';
+
+  alert('Задание 1');
+/*1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.*/
+
+  const border = +prompt('Введите число: в промежутке от нуля до данного числа будет осуществляться вывод простых чисел: ');
+
+  document.write(`Простые числа в промежутке от 0 до ${border}:`,"<br>");
+
+  var count = 0;
+  let i = 0;
+
+  while (i < border) {
+    if (isSimple(i)) {
+      document.write(i + "<br>");
+      count++;
+    }
+    i++;
+  }
+  document.write(`Количество простых чисел в промежутке от 0 до ${border} равно: ${count}`);
+
+  function isSimple(number) {
+    if (number < 2) {
+      return false;
+    }
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+      if (number % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+</script>
